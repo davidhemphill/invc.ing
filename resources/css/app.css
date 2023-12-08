@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+    accent-color: theme('colors.purple.600');
+}
+
+/* Contenteditable Placeholder */
+[contenteditable]:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    color: theme('colors.gray.300');
+    display: block; /* For Firefox */
+}
+
+@media print {
+    [contenteditable]:empty:before {
+        display: none;
+    }
+}
+
+
+/* Form Elements */
+.form-control {
+    @apply dark:bg-transparent dark:focus:bg-purple-950 dark:text-white block w-full appearance-none text-sm text-gray-700 focus:bg-purple-50 focus:outline-none placeholder-gray-300 dark:placeholder-gray-600;
+}
+
+@media print {
+    input::placeholder {
+        color: white !important;
+        opacity: 0 !important;
+    }
+}
+
+/* Button */
+.button {
+    @apply inline-flex items-center h-8 px-3 py-2 bg-white border border-transparent rounded-md font-semibold text-sm text-gray-600 disabled:opacity-25 transition;
+    @apply focus:ring focus:ring-offset-2 focus:ring-purple-600 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-950 focus:outline-none;
+}
+
+.button-primary {
+    @apply bg-purple-600 hover:bg-purple-500 focus:border-purple-500 text-white;
+}
+
+@tailwind utilities;
