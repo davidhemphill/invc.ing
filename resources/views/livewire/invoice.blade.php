@@ -6,7 +6,7 @@
             <div >
                 <div class="grid grid-cols-2 gap-x-8 gap-y-1 md:gap-8">
                     <!-- Your Company Name -->
-                    <div class="col-span-2 md:col-span-1">
+                    <div class="print:col-span-1 col-span-2 md:col-span-1">
                         <input class="form-control form-text text-xl font-bold" type="text"
                                wire:model.blur="form.companyName"
                                placeholder="ACME LLC"
@@ -14,8 +14,8 @@
                         />
                     </div>
 
-                    <div class="col-span-2 md:col-span-1">
-                        <div class="flex flex-col gap-[0.125in] md:[&_input]:text-right">
+                    <div class="print:col-span-1 col-span-2 md:col-span-1">
+                        <div class="flex flex-col gap-[0.125in] print:[&_input]:text-right md:[&_input]:text-right">
                             <!-- Invoice Title -->
                             <input class="form-control form-text text-3xl font-bold" type="text"
                                    wire:model.blur="form.invoiceTitle"
