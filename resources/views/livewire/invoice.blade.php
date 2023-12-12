@@ -110,16 +110,16 @@
                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead class=" dark:text-gray-200">
                     <tr>
-                        <th class="text-left text-xs py-2 w-32">Quantity</th>
+                        <th class="text-left text-xs py-2 w-12">Quantity</th>
                         <th class="text-left text-xs py-2 px-3">Description</th>
-                        <th class="text-right text-xs py-2 w-32">Price</th>
+                        <th class="text-right text-xs py-2 w-12">Price</th>
                     </tr>
                     </thead>
 
                     <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                     @foreach($form->items as $index => $item)
                         <tr x-ref="rows">
-                            <td class="text-sm py-2 align-top w-32">
+                            <td class="text-sm py-2 align-top w-12">
                                 <input data-quantity class="form-control form-text block w-full" type="text"
                                        min="1"
                                        wire:model.blur="form.items.{{ $index }}.quantity" placeholder="69"
@@ -130,7 +130,7 @@
                                        wire:model.blur="form.items.{{ $index }}.description"
                                        placeholder="Widgets"/>
                             </td>
-                            <td class="text-sm py-2 align-top w-32 relative text-right">
+                            <td class="text-sm py-2 align-top w-12 relative text-right">
                                 <input class="form-control form-text block w-full text-right" type="text"
                                        min="0"
                                        wire:model.blur="form.items.{{ $index }}.amount" placeholder="420.00"/>
@@ -198,7 +198,7 @@
                             <td class="px-3 text-sm   py-2 w-24 text-right font-bold" colspan="2">
                                 <span>Sub Total</span>
                             </td>
-                            <td class="text-sm   py-2 w-32 text-right">
+                            <td class="text-sm   py-2 w-12 text-right">
                                 <span>{{ $this->subtotalFormatted }}</span>
                             </td>
                         </tr>
@@ -262,7 +262,7 @@
                     <tr>
                         <td class="px-3 text-sm py-2 text-right font-bold" colspan="2"><span>Total</span>
                         </td>
-                        <td class="text-sm py-2 w-32 text-right">{{ $this->totalFormatted }}</td>
+                        <td class="text-sm py-2 w-12 text-right">{{ $this->totalFormatted }}</td>
                     </tr>
                     </tbody>
                 </table>
