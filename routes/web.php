@@ -30,7 +30,7 @@ Route::get('/i/{invoice}/download', function (Invoice $invoice) {
 Route::get('/i/{invoice}/dl', function (Invoice $invoice) {
     return response()->streamDownload(function () use ($invoice) {
         echo Browsershot::url(route('invoices.show', $invoice))
-            ->margins(25, 25, 25, 25)
+            ->margins(11, 11, 11, 11)
             ->waitUntilNetworkIdle()
             ->pdf();
     }, "Invoice-#{$invoice->created_at}.pdf", ['Content-Type' => 'application/pdf']);
