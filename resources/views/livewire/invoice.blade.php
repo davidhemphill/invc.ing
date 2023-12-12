@@ -28,7 +28,7 @@
                                         />
 
                                         <x-trash-button
-                                            class="absolute top-0 left-[15px]"
+                                            class="absolute top-[1px] left-[15px]"
                                             wire:click="removeMeta('primaryMeta', {{ $index }})"
                                         />
 
@@ -98,7 +98,7 @@
 
 
                                         <x-trash-button
-                                            class="absolute top-0 right-[15px]"
+                                            class="absolute top-[1px] right-[15px]"
                                             wire:click="removeMeta('tertiaryMeta', {{ $index }})"
                                         />
                                     </div>
@@ -121,7 +121,7 @@
                                                  placeholder="{{ $item['label'] }}"/>
 
                                         <x-trash-button
-                                            class="absolute top-0 right-[15px]"
+                                            class="absolute top-[2px] right-[15px]"
                                             wire:click="removeMeta('quaternaryMeta', {{ $index }})"
                                         />
                                     </div>
@@ -163,12 +163,13 @@
                                            placeholder="Widgets"/>
                                 </td>
                                 <td class="screen:pr-10 text-sm py-2 align-top w-20 relative text-right">
-                                    <input class="form-control form-text block w-full text-right" type="text"
+                                    <input class="form-control form-text block w-full text-right"
+                                           type="text"
                                            min="0"
                                            wire:model.blur="form.items.{{ $index }}.amount" placeholder="420.00"/>
 
                                     <x-trash-button
-                                        class="absolute top-[10px] right-[15px]"
+                                        class="absolute top-[9px] right-[15px]"
                                         wire:click="removeMeta('items', {{ $index }})"
                                     />
                                 </td>
