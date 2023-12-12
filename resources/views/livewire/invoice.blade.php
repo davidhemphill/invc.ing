@@ -7,7 +7,7 @@
                 <!-- Left Side -->
                 <div class="print:order-1 order-2 md:order-1 print:col-span-1 col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
                     <!-- Your Company Name -->
-                    <div class="print:col-span-1 col-span-2 md:col-span-1 md:mb-[0.5in]">
+                    <div class="print:col-span-1 col-span-2 md:col-span-1 md:mb-[0.6in]">
                         <input class="form-control form-text text-xl font-bold" type="text"
                                wire:model.blur="form.companyName"
                                placeholder="ACME LLC"
