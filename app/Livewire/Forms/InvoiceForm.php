@@ -27,6 +27,7 @@ class InvoiceForm extends Form
 
     #[Validate('array')]
     public array $secondaryMeta = [
+        ['label' => 'Tax ID', 'value' => ''],
         ['label' => 'Phone', 'value' => ''],
         ['label' => 'Email', 'value' => ''],
     ];
