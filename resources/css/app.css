@@ -16,13 +16,14 @@
 @media print {
     [contenteditable]:empty:before {
         display: none;
+        color: theme('colors.gray.400');
     }
 }
 
 
 /* Form Elements */
 .form-control {
-    @apply dark:bg-transparent dark:focus:bg-purple-950 dark:text-white block w-full appearance-none text-sm text-gray-700 focus:bg-purple-50 focus:outline-none placeholder-gray-300 dark:placeholder-gray-600;
+    @apply dark:bg-transparent dark:focus:bg-purple-950 dark:text-white block w-full appearance-none text-sm text-gray-700 focus:bg-purple-50 focus:outline-none placeholder-gray-300 dark:placeholder-gray-400;
 }
 
 @media print {
