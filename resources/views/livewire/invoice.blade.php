@@ -28,7 +28,7 @@
 
                 <!-- Left Side -->
                 <div class="grid grid-cols-2 gap-8 pt-[0.25in] md:pt-[0.5in] pb-[0.5in]">
-                    <div class="col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
+                    <div class="print:col-span-1 col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
                         <!-- Primary Meta -->
                         <x-fieldset>
                             @foreach ($form->primaryMeta as $index => $item)
@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Right Side -->
-                    <div class="col-span-2 md:col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
+                    <div class="print:col-span-1 col-span-2 md:col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
                         <x-fieldset>
                             @foreach ($form->tertiaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
