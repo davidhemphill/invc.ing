@@ -6,7 +6,7 @@
             <div >
                 <div class="grid grid-cols-2 gap-x-8 gap-y-1 md:gap-8">
                     <!-- Your Company Name -->
-                    <div class="screen:col-span-2 md:col-span-1">
+                    <div class="screen:md:col-span-2 md:col-span-1">
                         <input class="form-control form-text text-xl font-bold" type="text"
                                wire:model.blur="form.companyName"
                                placeholder="ACME LLC"
@@ -14,7 +14,7 @@
                         />
                     </div>
 
-                    <div class="screen:col-span-2 md:col-span-1">
+                    <div class="screen:md:col-span-2 md:col-span-1">
                         <div class="flex flex-col gap-[0.125in] md:[&_input]:text-right">
                             <!-- Invoice Title -->
                             <input class="form-control form-text text-3xl font-bold" type="text"
@@ -28,7 +28,7 @@
 
                 <!-- Left Side -->
                 <div class="grid grid-cols-2 gap-8 pt-[0.25in] md:pt-[0.5in] pb-[0.5in]">
-                    <div class="screen:col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
+                    <div class="screen:md:col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
                         <!-- Primary Meta -->
                         <x-fieldset>
                             @foreach ($form->primaryMeta as $index => $item)
@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Right Side -->
-                    <div class="screen:col-span-2 md:col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
+                    <div class="screen:md:col-span-2 col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
                         <x-fieldset>
                             @foreach ($form->tertiaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
