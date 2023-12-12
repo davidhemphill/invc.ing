@@ -1,4 +1,4 @@
-<form class="flex flex-col gap-8 mx-auto max-w-[8.5in] screen:px-2">
+<form class="flex flex-col gap-8 divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-[8.5in] screen:px-2 screen:pb-8">
     <div class="flex flex-col gap-8">
         <x-header/>
 
@@ -280,5 +280,9 @@
                 style="min-height: 40px; -webkit-user-modify: read-write-plaintext-only;">{!! $form->notes !!}
             </div>
         </div>
+    </div>
+
+    <div class="print:hidden py-8">
+    <p class="text-xs text-gray-400 leading-normal">Tip: Blank items are automatically removed</p>
     </div>
 </form>
