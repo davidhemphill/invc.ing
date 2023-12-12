@@ -6,6 +6,13 @@ export default {
         "./resources/**/*.blade.php",
     ],
     theme: {
+        container: {
+            center: true,
+            screens: {
+                default: '8.5in'
+            }
+        },
+
         extend: {
             colors: {
                 gray: twColors.slate,
