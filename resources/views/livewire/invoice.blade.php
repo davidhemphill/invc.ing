@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Right Side -->
-                    <div class="col-span-2 col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-[0.25in] md:[&_input]:text-right">
                         <x-fieldset>
                             @foreach ($form->tertiaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
