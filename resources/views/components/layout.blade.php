@@ -13,7 +13,7 @@
     @livewireStyles
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
-<body class="dark:screen:bg-gray-950 text-gray-700 dark:text-white text-sm print:text-xs print:my-[0.5in] print:mx-[0.5in]">
+<body class="dark:screen:bg-gray-950 text-gray-700 dark:text-white text-sm print:text-xs">
 {{ $slot }}
 @livewireScriptConfig
 @stack('scripts')
