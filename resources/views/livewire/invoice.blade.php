@@ -1,10 +1,10 @@
-<form class="flex flex-col gap-8">
-    <div class="flex flex-col gap-8 mx-auto screen:max-w-4xl">
+<form class="flex flex-col gap-8 mx-auto max-w-[8.5in]">
+    <div class="flex flex-col gap-8">
         <x-header/>
 
         <div class="flex flex-col gap-[0.25in]">
             <div
-                class="screen:bg-white dark:screen:bg-gray-900 screen:rounded-xl screen:shadow overflow-hidden p-4 screen:md:p-[0.75in]">
+                class="">
                 <div class="grid grid-cols-2 gap-x-8 gap-y-1 md:gap-8">
                     <!-- Your Company Name -->
                     <div class="col-span-2 md:col-span-1">
@@ -48,7 +48,7 @@
 {{--                                                els[els.length-3]?.focus();--}}
                                             "
 
-                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-900"
+                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"
                                     />
                                 </div>
                             @endforeach
@@ -66,7 +66,7 @@
                                     <button type="button"
                                             aria-label="Add Row"
                                             wire:click="addMetaAfterIndex('secondaryMeta', '{{ $index }}')"
-                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-900"
+                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"
                                     />
                                 </div>
                             @endforeach
@@ -86,7 +86,7 @@
                                     <button type="button"
                                             aria-label="Add Row"
                                             wire:click="addMetaAfterIndex('tertiaryMeta', '{{ $index }}')"
-                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-900"
+                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"
                                     />
                                 </div>
                             @endforeach
@@ -102,7 +102,7 @@
                                     <button type="button"
                                             aria-label="Add Row"
                                             wire:click="addMetaAfterIndex('quaternaryMeta', '{{ $index }}')"
-                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-900"
+                                            class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"
                                     />
                                 </div>
                             @endforeach
@@ -287,9 +287,4 @@
             </div>
         </div>
     </div>
-
-    <p class="print:hidden text-center font-medium text-xs">
-        Made with 🍆 by <a href="https://twitter.com/davidhemphill" target="_blank"
-                          class="text-purple-600 dark:text-purple-400 hover:underline">Hemp</a>
-    </p>
 </form>

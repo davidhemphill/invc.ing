@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="mx-auto bg-white dark:bg-gray-900 rounded-lg max-w-sm p-8 flex flex-col gap-6">
+    <div class="mx-auto bg-white dark:bg-gray-950 rounded-lg max-w-sm p-8 flex flex-col gap-6">
         <div class="flex flex-col gap-3">
             <h1 class="text-xl font-bold">Downloading your invoice...</h1>
             <p>Made some mistakes? You can keep editing this invoice for the next 3 days...</p>
