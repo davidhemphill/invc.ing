@@ -1,5 +1,5 @@
 <!-- Header -->
-<div class="print:hidden flex items-center justify-between py-8">
+<div class="print:hidden flex flex-col md:flex-row gap-4 items-center justify-between py-8">
     <a href="{{ route('home') }}" class="flex items-center gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 50"
              class="text-gray-800 dark:text-white block h-6">

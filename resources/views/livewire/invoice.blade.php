@@ -1,4 +1,4 @@
-<form class="flex flex-col gap-8 mx-auto max-w-[8.5in]">
+<form class="flex flex-col gap-8 mx-auto max-w-[8.5in] screen:px-2">
     <div class="flex flex-col gap-8">
         <x-header/>
 
