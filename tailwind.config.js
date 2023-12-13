@@ -8,6 +8,7 @@ export default {
     theme: {
         container: {
             center: true,
+            padding: '2rem',
             screens: {
                 default: '8.5in'
             }
