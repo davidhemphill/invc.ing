@@ -9,7 +9,7 @@
                     <div
                         class="print:order-1 order-2 md:order-1 print:col-span-1 col-span-2 md:col-span-1 flex flex-col gap-[0.25in]">
                         <!-- Your Company Name -->
-                        <div class="screen:pl-10 print:col-span-1 col-span-2 md:col-span-1 md:mb-[0.6in]">
+                        <div class="screen:md:pl-10 print:col-span-1 col-span-2 md:col-span-1 md:mb-[0.6in]">
                             <input class="form-control form-text text-xl font-bold" type="text"
                                    wire:model.blur="form.companyName"
                                    placeholder="ACME LLC"
@@ -21,14 +21,14 @@
                         <x-fieldset class="group">
                             @foreach ($form->primaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
-                                    <div class="screen:pl-10 relative flex items-center">
+                                    <div class="screen:md:pl-10 relative flex items-center">
                                         <x-input
                                             wire:model.blur="form.primaryMeta.{{ $index }}.value"
                                             placeholder="{{ $item['label'] }}"
                                         />
 
                                         <x-trash-button
-                                            class="absolute top-[1px] left-[15px]"
+                                            class="absolute top-[1px] right-[15px] md:left-[15px] "
                                             wire:click="removeMeta('primaryMeta', {{ $index }})"
                                         />
 
@@ -53,14 +53,14 @@
                         <x-fieldset>
                             @foreach ($form->secondaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
-                                    <div class="screen:pl-10 relative flex items-center">
+                                    <div class="screen:md:pl-10 relative flex items-center">
                                         <x-input
                                             wire:model.blur="form.secondaryMeta.{{ $index }}.value"
                                             placeholder="{{ $item['label'] }}"
                                         />
 
                                         <x-trash-button
-                                            class="absolute top-0 left-[15px]"
+                                            class="absolute top-0 right-[15px] md:left-[15px]"
                                             wire:click="removeMeta('secondaryMeta', {{ $index }})"
                                         />
                                     </div>
