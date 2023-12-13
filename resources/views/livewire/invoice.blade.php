@@ -1,6 +1,6 @@
-<form class="screen:px-2 screen:pb-8 flex flex-col gap-8">
+<form class="screen:pb-8 flex flex-col gap-8">
     <x-header/>
-    <div class="flex flex-col gap-8 divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-[8.5in]">
+    <div class="flex flex-col gap-8 divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-[8.5in] px-2">
         <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-[0.25in]">
                 <div class="grid grid-cols-2 gap-8 pb-[0.5in]">
