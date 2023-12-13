@@ -2,7 +2,6 @@
     <x-header/>
     <div class="flex flex-col gap-8 divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-[8.5in]">
         <div class="flex flex-col gap-8">
-
             <div class="flex flex-col gap-[0.25in]">
                 <div class="grid grid-cols-2 gap-8 pb-[0.5in]">
                     <!-- Left Side -->
@@ -18,7 +17,15 @@
                         </div>
 
                         <!-- Primary Meta -->
-                        <x-fieldset class="group">
+                        <x-fieldset>
+                            <div class="flex flex-col mt-[-4px]">
+{{--                                <button type="button"--}}
+{{--                                        aria-label="Add Row"--}}
+{{--                                        wire:click="addMetaAfterIndex('primaryMeta', '-1')"--}}
+{{--                                        x-on:click="await $wire.addMetaAfterIndex('primaryMeta', '-1')"--}}
+{{--                                        class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"--}}
+{{--                                />--}}
+                            </div>
                             @foreach ($form->primaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
                                     <div class="screen:md:pl-10 relative flex items-center">
@@ -28,21 +35,14 @@
                                         />
 
                                         <x-trash-button
-                                            class="absolute top-[1px] right-[15px] md:left-[15px] "
+                                            class="absolute top-0 right-[15px] md:left-[15px]"
                                             wire:click="removeMeta('primaryMeta', {{ $index }})"
                                         />
-
                                     </div>
 
                                     <button type="button"
                                             aria-label="Add Row"
                                             wire:click="addMetaAfterIndex('primaryMeta', '{{ $index }}')"
-                                            x-on:click="
-                                                await $wire.addMetaAfterIndex('primaryMeta', '{{ $index }}');
-{{--                                                let els = $refs.rows.querySelectorAll('input');--}}
-{{--                                                els[els.length-3]?.focus();--}}
-                                            "
-
                                             class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"
                                     />
                                 </div>

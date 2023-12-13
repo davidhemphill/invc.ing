@@ -68,7 +68,7 @@ class InvoiceForm extends Form
     public string $currency = 'USD';
 
     #[Validate('string')]
-    public string $notes = 'Thank you!';
+    public string $notes = '';
 
     public function setInvoice(Invoice $invoice)
     {
@@ -91,22 +91,7 @@ class InvoiceForm extends Form
      */
     public function data(): array
     {
-        return array_merge(
-            $this->except('invoice'),
-            $this->filteredData('primaryMeta'),
-            $this->filteredData('secondaryMeta'),
-            $this->filteredData('tertiaryMeta'),
-            $this->filteredData('quaternaryMeta'),
-        );
-    }
-
-    public function filteredData(string $key)
-    {
-        return [
-            $key => array_filter($this->{$key}, function ($i) {
-                return !empty($i['value']);
-            })
-        ];
+        return $this->except('invoice');
     }
 
     public function save()

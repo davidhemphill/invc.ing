@@ -47,17 +47,17 @@ class InvoiceFactory extends Factory
 
                 'items' => [
                     [
-                        'quantity' => '69',
-                        'description' => 'Hours of work on Laravel Cloud',
-                        'amount' => '420',
+                        'quantity' => '1',
+                        'description' => 'Laravel Nova IP Acquisition',
+                        'amount' => '1500000',
                     ],
                 ],
 
                 'tax1Name' => 'State',
-                'tax1' => '5',
+                'tax1' => '0',
                 'tax2Name' => 'Federal',
-                'tax2' => '10',
-                'enableTaxes' => true,
+                'tax2' => '0',
+                'enableTaxes' => false,
                 'notes' => 'Laravel Forever!',
 
                 'currency' => 'USD',

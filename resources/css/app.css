@@ -43,4 +43,8 @@
     @apply bg-purple-600 hover:bg-purple-500 focus:border-purple-500 text-white;
 }
 
+.button-copy {
+    @apply bg-gray-200/50 hover:bg-gray-200 dark:bg-gray-700/75 dark:hover:bg-gray-700 focus:border-gray-500 text-gray-600 dark:text-gray-400;
+}
+
 @tailwind utilities;
