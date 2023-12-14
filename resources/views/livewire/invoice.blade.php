@@ -19,12 +19,12 @@
                         <!-- Primary Meta -->
                         <x-fieldset>
                             <div class="flex flex-col mt-[-4px]">
-{{--                                <button type="button"--}}
-{{--                                        aria-label="Add Row"--}}
-{{--                                        wire:click="addMetaAfterIndex('primaryMeta', '-1')"--}}
-{{--                                        x-on:click="await $wire.addMetaAfterIndex('primaryMeta', '-1')"--}}
-{{--                                        class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"--}}
-{{--                                />--}}
+                                {{--                                <button type="button"--}}
+                                {{--                                        aria-label="Add Row"--}}
+                                {{--                                        wire:click="addMetaAfterIndex('primaryMeta', '-1')"--}}
+                                {{--                                        x-on:click="await $wire.addMetaAfterIndex('primaryMeta', '-1')"--}}
+                                {{--                                        class="print-hidden h-1 focus:outline-none rounded-full bg-white hover:bg-purple-600/50 focus:bg-purple-600/50 dark:bg-gray-950"--}}
+                                {{--                                />--}}
                             </div>
                             @foreach ($form->primaryMeta as $index => $item)
                                 <div class="flex flex-col mt-[-4px]">
@@ -158,9 +158,11 @@
                                     />
                                 </td>
                                 <td class="px-3 text-sm py-2 align-top">
-                                    <input class="form-control form-textarea block w-full" type="text"
-                                           wire:model.blur="form.items.{{ $index }}.description"
-                                           placeholder="Widgets"/>
+                                    <x-contenteditable
+                                        key="form.items.{{ $index }}.description"
+                                        :value="$form->items[$index]['description']"
+                                        placeholder="Widgets"
+                                    />
                                 </td>
                                 <td class="screen:pr-10 text-sm py-2 align-top w-20 relative text-right">
                                     <input class="form-control form-text block w-full text-right"
@@ -297,24 +299,24 @@
                 </div>
 
                 <!-- Notes -->
-                <div class="screen:px-10">
-                    <div
-                        class="form-control"
-                        contenteditable="plaintext-only"
-                        wire:ignore
-                        x-data
-                        x-on:input.debounce.500="$wire.set('form.notes', $event.target.innerText)"
+                <div
+                    wire:ignore
+                    class="screen:px-10"
+                >
+                    <x-contenteditable
+                        key="form.notes"
+                        :value="$form->notes"
                         placeholder="Write a note to your client..."
-                        class="cursor-text mt-2 w-full form-control form-textarea whitespace-pre-wrap select-text break-words p-2"
-                        style="min-height: 40px; -webkit-user-modify: read-write-plaintext-only;">{!! $form->notes !!}
-                    </div>
+                    />
                 </div>
             </div>
         </div>
 
+        <!-- Generate Button -->
         <div class="print:hidden py-8">
-            <p class="text-xs text-gray-400 leading-normal">Tip: Blank items are automatically removed</p>
+            <div class="print:hidden md:text-center">
+                <button wire:click="save" type="button" class="button button-primary">Download PDF</button>
+            </div>
         </div>
-
     </div>
 </form>

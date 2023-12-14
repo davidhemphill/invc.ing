@@ -5,22 +5,6 @@
     accent-color: theme('colors.purple.600');
 }
 
-/* Contenteditable Placeholder */
-[contenteditable]:empty:before {
-    content: attr(placeholder);
-    pointer-events: none;
-    color: theme('colors.gray.300');
-    display: block; /* For Firefox */
-}
-
-@media print {
-    [contenteditable]:empty:before {
-        display: none;
-        color: theme('colors.gray.400');
-    }
-}
-
-
 /* Form Elements */
 .form-control {
     @apply dark:bg-transparent dark:focus:bg-purple-950 dark:text-white block w-full appearance-none text-sm text-gray-700 focus:bg-purple-50 focus:outline-none placeholder-gray-300 dark:placeholder-gray-400;
