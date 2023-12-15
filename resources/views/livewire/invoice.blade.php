@@ -1,4 +1,4 @@
-<form class="screen:pb-8 flex flex-col gap-8">
+<div x-cloak class="screen:pb-8 flex flex-col gap-8">
     <x-header/>
     <div class="flex flex-col gap-8 divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-[8.5in] px-2">
         <div class="flex flex-col gap-8">
@@ -160,7 +160,7 @@
                                 <td class="px-3 text-sm py-2 align-top">
                                     <x-contenteditable
                                         key="form.items.{{ $index }}.description"
-                                        :value="$form->items[$index]['description']"
+                                        wire:model="form.items.{{ $index }}.description"
                                         placeholder="Widgets"
                                     />
                                 </td>
@@ -300,12 +300,11 @@
 
                 <!-- Notes -->
                 <div
-                    wire:ignore
                     class="screen:px-10"
                 >
                     <x-contenteditable
                         key="form.notes"
-                        :value="$form->notes"
+                        wire:model.blur="form.notes"
                         placeholder="Write a note to your client..."
                     />
                 </div>
@@ -319,4 +318,4 @@
             </div>
         </div>
     </div>
-</form>
+</div>
