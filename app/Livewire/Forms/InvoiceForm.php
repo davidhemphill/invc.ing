@@ -96,8 +96,9 @@ class InvoiceForm extends Form
 
     public function save()
     {
-        $this->validate();
-
-        $this->invoice->update(['data' => $this->data()]);
+        if (!$this->form->invoice->locked) {
+            $this->validate();
+            $this->invoice->update(['data' => $this->data()]);
+        }
     }
 }
