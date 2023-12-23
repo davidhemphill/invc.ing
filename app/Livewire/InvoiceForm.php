@@ -125,7 +125,9 @@ class InvoiceForm extends Component
     public function save()
     {
         if ($this->form->invoice->exists) {
-            $this->form->save();
+            if (!$this->form->invoice->locked) {
+                $this->form->save();
+            }
             return $this->visitDownloadPage();
         } else {
             $this->form->create();

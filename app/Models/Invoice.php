@@ -14,6 +14,7 @@ class Invoice extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'data' => 'array'
+        'data' => 'array',
+        'locked' => 'boolean',
     ];
 }
