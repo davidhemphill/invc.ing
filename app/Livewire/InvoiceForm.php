@@ -21,7 +21,7 @@ class InvoiceForm extends Component
     public function subtotal(): int
     {
         return collect($this->form->items)->sum(function ($item) {
-            return (int) $item['quantity'] * (int) $item['amount'];
+            return (int) $item['quantity'] * $item['amount'];
         });
     }
 
