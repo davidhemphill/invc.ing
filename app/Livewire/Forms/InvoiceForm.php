@@ -46,8 +46,17 @@ class InvoiceForm extends Form
         ['label' => 'Attn', 'value' => ''],
     ];
 
-    #[Validate('array')]
-    public array $items = [];
+    #[Validate([
+        'items' => 'confirmed',
+        'items.*.amount' => 'confirmed'
+    ])]
+    public array $items = [
+        [
+            'quantity' => '1',
+            'description' => 'Example Item',
+            'amount' => '1'
+        ]
+    ];
 
     #[Validate(['string'])]
     public string $tax1Name = 'Tax 1';
