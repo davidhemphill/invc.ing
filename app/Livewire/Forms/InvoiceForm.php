@@ -46,10 +46,7 @@ class InvoiceForm extends Form
         ['label' => 'Attn', 'value' => ''],
     ];
 
-    #[Validate([
-        'items' => 'confirmed',
-        'items.*.amount' => 'confirmed'
-    ])]
+    #[Validate('array')]
     public array $items = [
         [
             'quantity' => '1',
