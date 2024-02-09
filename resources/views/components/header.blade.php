@@ -11,6 +11,8 @@
                 </h1>
                 <span class="text-xs text-gray-500">free online invoice PDF generator</span>
             </div>
+
+            <p>Want more? Try <a href="https://pushsilver.com">Pushsilver</a></p>
         </div>
     </div>
 </div>
